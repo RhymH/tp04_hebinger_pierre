@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+
+  articles_url: '/assets/mock/produits_mock.json'
 };
 
 /*
