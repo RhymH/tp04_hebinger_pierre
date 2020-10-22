@@ -34,6 +34,7 @@
         <th scope="col">Nom</th>
         <th scope="col">Catégorie</th>
         <th scope="col">Prix</th>
+        <th scope="col"></th>
       </tr>
       </thead>
       <tbody>
@@ -41,6 +42,7 @@
         <td>{{ item.nom }}</td>
         <td>{{ item.categorie }}</td>
         <td>{{ item.prix }}</td>
+        <td><button class="btn btn-primary" (click)="OnClick(item)" >ADD</button></td>
       </tr>
       </tbody>
     </table>

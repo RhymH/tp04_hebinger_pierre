@@ -8,6 +8,11 @@ import { TetiereComponent } from './tetiere/tetiere.component';
 import { HttpClientModule } from "@angular/common/http";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
+import { NgxsModule } from '@ngxs/store';
+import {ArticlesState} from './modules/states/articles-state';
+import {AppRouterModule} from './modules/rooter/app-router';
+import { HomeComponent } from './home/home.component';
+
 
 @NgModule({
   declarations: [
@@ -15,12 +20,15 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     FooterComponent,
     TetiereComponent,
     CatalogueComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    AppRouterModule,
+    NgxsModule.forRoot ([ArticlesState])
   ],
   providers: [],
   bootstrap: [AppComponent]

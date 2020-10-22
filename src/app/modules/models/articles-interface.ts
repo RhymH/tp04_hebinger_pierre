@@ -1,9 +1,8 @@
 
 export interface Articles {
-
-  nom : string;
+  nom: string;
   categorie: string;
-  prix : string;
+  prix: string;
 
 }
 
