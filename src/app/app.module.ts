@@ -12,6 +12,8 @@ import { NgxsModule } from '@ngxs/store';
 import {ArticlesState} from './modules/states/articles-state';
 import {AppRouterModule} from './modules/rooter/app-router';
 import { HomeComponent } from './home/home.component';
+import { CartComponent } from './cart/cart.component';
+import { DetailsComponent } from './details/details.component';
 
 
 @NgModule({
@@ -21,6 +23,8 @@ import { HomeComponent } from './home/home.component';
     TetiereComponent,
     CatalogueComponent,
     HomeComponent,
+    CartComponent,
+    DetailsComponent,
   ],
   imports: [
     BrowserModule,

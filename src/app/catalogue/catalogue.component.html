@@ -31,18 +31,22 @@
     <table class="table">
       <thead class="thead-dark">
       <tr>
+        <th scope="#"></th>
         <th scope="col">Nom</th>
         <th scope="col">Catégorie</th>
         <th scope="col">Prix</th>
+        <th scope="col"></th>
         <th scope="col"></th>
       </tr>
       </thead>
       <tbody>
       <tr *ngFor="let item of articles | async">
+        <td>{{i}}</td>
         <td>{{ item.nom }}</td>
         <td>{{ item.categorie }}</td>
         <td>{{ item.prix }}</td>
         <td><button class="btn btn-primary" (click)="OnClick(item)" >ADD</button></td>
+        <td><button class="btn btn-primary" [routerLink]="['/details/',item.nom]">details</button></td>
       </tr>
       </tbody>
     </table>
