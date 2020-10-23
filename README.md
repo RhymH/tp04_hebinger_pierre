@@ -1,6 +1,6 @@
 # App
 
-https://angular-ivy-ghanne.stackblitz.io
+https://stackblitz.com/edit/angular-ivy-d2xlnh
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.5.
 
