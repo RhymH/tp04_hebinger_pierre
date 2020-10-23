@@ -1,19 +1,20 @@
 
 import { Routes, RouterModule } from '@angular/router';
-import {CatalogueComponent} from '../../catalogue/catalogue.component';
-import {NgModule} from '@angular/core';
-import {HomeComponent} from '../../home/home.component';
-import {CartComponent} from '../../cart/cart.component';
-import {DetailsComponent} from '../../details/details.component';
-import {FormulaireClientComponent} from '../../formulaire-client/formulaire-client.component';
+import { NgModule} from '@angular/core';
+import { HomeComponent} from '../../home/home.component';
 
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
-  {path: 'catalogue', component: CatalogueComponent},
-  {path: 'cart', component: CartComponent},
-  {path: 'details/:id', component: DetailsComponent},
-  {path: 'client', component: FormulaireClientComponent},
+  {path: 'catalogue', loadChildren: () => import('../../catalogue/catalogue.module').then(m => m.CatalogueModule)},
+  {path: 'cart', loadChildren: () => import('../../cart/cart.module').then(m => m.CartModule)},
+  {path: 'details/:id', loadChildren: () => import('../../details/details.module').then(m => m.DetailsModule)},
+  {path: 'client', loadChildren: () => import('../../formulaire-client/formulaire-client.module').then(m => m.FormulaireClientModule)},
+  {path: 'recap', loadChildren: () => import('../../recap/recap.module').then(m => m.RecapModule)},
+  {
+    path: '**',
+    redirectTo: ''
+  }
 ]
 
 @NgModule({

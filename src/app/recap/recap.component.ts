@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Client } from "../modules/client";
+import {AppComponent} from '../app.component';
 
 @Component({
   selector: 'app-recap',
@@ -8,12 +9,12 @@ import { Client } from "../modules/client";
 })
 export class RecapComponent implements OnInit {
 
-  @Input() client: Client;
+  client: Client;
 
-  constructor() { }
+  constructor(private app: AppComponent) {}
 
   ngOnInit(): void {
-
+    this.client = this.app.client;
   }
 
 }

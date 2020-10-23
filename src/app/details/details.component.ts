@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {Observable} from 'rxjs';
 import {Articles} from '../modules/models/articles-interface';
-import {map} from 'rxjs/operators';
 import {ArticlesService} from '../modules/articles.service';
 import {AddArticles} from '../modules/actions/article-action';
 import {Store} from '@ngxs/store';

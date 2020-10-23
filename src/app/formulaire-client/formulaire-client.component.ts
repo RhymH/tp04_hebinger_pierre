@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Client } from "../modules/client";
+import {Router} from '@angular/router';
+import {AppComponent} from '../app.component';
 
 @Component({
   selector: 'app-formulaire-client',
@@ -10,7 +12,7 @@ export class FormulaireClientComponent implements OnInit {
 
   public client: Client;
 
-  constructor() { }
+  constructor(private router: Router, private app: AppComponent) { }
 
   ngOnInit(): void {
 
@@ -34,6 +36,9 @@ export class FormulaireClientComponent implements OnInit {
   save(model: Client, isValid: boolean){
     if(isValid){
       this.client = model;
+      this.app.client = model;
+
+      this.router.navigate(['recap']);
     }
     console.log(model, isValid);
   }
