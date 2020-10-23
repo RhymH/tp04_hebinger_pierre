@@ -14,6 +14,10 @@ import {AppRouterModule} from './modules/rooter/app-router';
 import { HomeComponent } from './home/home.component';
 import { CartComponent } from './cart/cart.component';
 import { DetailsComponent } from './details/details.component';
+import {FormulaireClientComponent} from './formulaire-client/formulaire-client.component';
+import {EqualValidator} from './modules/equal-validator.directive';
+import {PipeTelephone} from './modules/telephone.pipe';
+import {RecapComponent} from './recap/recap.component';
 
 
 @NgModule({
@@ -25,6 +29,10 @@ import { DetailsComponent } from './details/details.component';
     HomeComponent,
     CartComponent,
     DetailsComponent,
+    FormulaireClientComponent,
+    RecapComponent,
+    EqualValidator,
+    PipeTelephone
   ],
   imports: [
     BrowserModule,

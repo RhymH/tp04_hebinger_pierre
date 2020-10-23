@@ -45,8 +45,8 @@
         <td>{{ item.nom }}</td>
         <td>{{ item.categorie }}</td>
         <td>{{ item.prix }}</td>
-        <td><button class="btn btn-primary" (click)="OnClick(item)" >ADD</button></td>
-        <td><button class="btn btn-primary" [routerLink]="['/details/',item.nom]">details</button></td>
+        <td><button class="btn btn-primary" (click)="OnClick(item)" >Ajouter</button></td>
+        <td><button class="btn btn-primary" [routerLink]="['/details/',item.nom]">Détails</button></td>
       </tr>
       </tbody>
     </table>

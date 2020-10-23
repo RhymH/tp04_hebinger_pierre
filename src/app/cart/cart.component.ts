@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Store} from '@ngxs/store';
 import {Observable} from 'rxjs';
 import {Articles} from '../modules/models/articles-interface';
+import {AddArticles, DelArticles} from '../modules/actions/article-action';
 
 @Component({
   selector: 'app-cart',
@@ -20,6 +21,11 @@ export class CartComponent implements OnInit {
 
 
   OnClick(item: Articles) {
+    this.addArticle(item.nom, item.categorie, item.prix);
+  }
+
+  addArticle(nom: string, categorie: string, prix: string) {
+    this.store.dispatch(new DelArticles({ nom, categorie, prix }));
 
   }
 }
